@@ -1,0 +1,114 @@
+/* *{
+    color: white;
+} */
+.headerwrap{
+    display: flex;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 99;
+    transition: height .3s ease, background-color .3s ease;
+    align-items: center;
+    justify-content: space-between;
+    /* padding:0 20px; */
+
+}
+.headerwrap .logo{
+    width: 20%;
+    background-color: transparent;
+    /* background-color: red; */
+
+}
+.logostyle{
+    color: unset;
+    text-decoration: none;
+    background-color: transparent;
+}
+.color-logo{
+    color: crimson;
+    font-weight: 600;
+    font-size: 30px;
+    background-color: transparent;
+
+}
+.logosmall{
+    font-size: 20px;
+    background-color: transparent;
+}
+.headernav{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    background-color: transparent;
+    
+}
+.headernav li{
+    text-decoration: none;
+    background-color: transparent;
+    
+}
+.headernav .active::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: red;
+    left:50%;
+    width: 100%;
+    transition: width .6s ease;
+    /* transform: translateX(-50%); */
+    
+}
+h1{
+  background-color: transparent;
+}
+.listdisplay{
+ color: unset;
+ text-decoration: none;
+ background-color: transparent;
+}
+.listdisplay::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: crimson;
+    width: 0;
+    transition: width .6s ease;
+}
+.active:hover::after{
+    width: 100%;
+}
+
+
+@media (max-width: 768px){
+     .headerwrap {
+    height: 4.3rem;
+  }
+
+  .headerwrap .logo {
+    width: 30%;
+    /* background-color: red; */
+    padding-left: 20px;
+  }
+
+  .logostyle {
+    font-size: 15px;
+  }
+
+  .color-logo {
+    font-size: 34px;
+  }
+
+  .logosmall {
+    display: none;
+  }
+
+  .headernav {
+    width: 70%;
+    font-size: 14px;
+  }
+}

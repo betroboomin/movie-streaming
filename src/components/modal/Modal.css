@@ -1,0 +1,42 @@
+.modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal.content{
+    padding: 2rem;
+    background-color: #0f0f0f;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(-250px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    position: ralative;
+}
+.modal.content.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.modal.content.close:hover{
+    color: crimson;
+}
+
+.modal.active .content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
