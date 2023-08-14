@@ -1,26 +1,86 @@
-/* *{
+*{
     color: white;
-} */
-.headerwrap{
+
+}
+.header{
     display: flex;
-    height: 5rem;
+    height: 8rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: transparent;
     z-index: 99;
-    transition: height .3s ease, background-color .3s ease;
-    align-items: center;
-    justify-content: space-between;
+    transition: height .8s ease, background-color .5s ease;
+    
     /* padding:0 20px; */
 
+  
+
 }
-.headerwrap .logo{
-    width: 20%;
+.header.shrink{
+  height: 5rem;
+  background-color: #0f0f0f8a;
+  padding: 3.5rem 0;
+}
+
+.header__wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: red; */
+  height: 100%;
+  padding: 0 3rem;
+}
+.header__nav{
+ display: flex;
+ align-items: center;
+ justify-content: unset;
+}
+.header__nav > * ~ * {
+  margin-left: 2rem;
+}
+.header__nav li{
+  padding: 5px 0;
+  font-weight: 700;
+  position: relative;
+  font-size: 1.5rem;
+ 
+}
+.liststyling{
+  text-decoration: none;
+}
+.header__nav li::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transition: width .5s ease;
+  height: 2px;
+  background-color: crimson;
+}
+.header__nav li.active::after, .header__nav li:hover::after{
+  width: 100%;
+}
+.header__wrap .logo{
     background-color: transparent;
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: red; */
 
+}
+.header__wrap .logo img{  
+  width: 120px;
+  height: auto;
+  
+  /* background-color: transparent; */
+  
 }
 .logostyle{
     color: unset;
@@ -30,7 +90,7 @@
 .color-logo{
     color: crimson;
     font-weight: 600;
-    font-size: 30px;
+    /* font-size: 30px; */
     background-color: transparent;
 
 }
@@ -38,7 +98,7 @@
     font-size: 20px;
     background-color: transparent;
 }
-.headernav{
+/* .headernav{
     display: flex;
     width: 50%;
     align-items: center;
@@ -46,50 +106,19 @@
     list-style: none;
     background-color: transparent;
     
-}
-.headernav li{
-    text-decoration: none;
-    background-color: transparent;
-    
-}
-.headernav .active::after{
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: red;
-    left:50%;
-    width: 100%;
-    transition: width .6s ease;
-    /* transform: translateX(-50%); */
-    
-}
+} */
+
+
 h1{
   background-color: transparent;
 }
-.listdisplay{
- color: unset;
- text-decoration: none;
- background-color: transparent;
-}
-.listdisplay::after{
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: crimson;
-    width: 0;
-    transition: width .6s ease;
-}
-.active:hover::after{
-    width: 100%;
-}
-
 
 @media (max-width: 768px){
      .headerwrap {
     height: 4.3rem;
   }
 
-  .headerwrap .logo {
+  .header__wrap .logo {
     width: 30%;
     /* background-color: red; */
     padding-left: 20px;
@@ -107,7 +136,7 @@ h1{
     display: none;
   }
 
-  .headernav {
+  .header__nav {
     width: 70%;
     font-size: 14px;
   }

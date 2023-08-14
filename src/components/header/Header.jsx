@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.css';
+import logo from '../../assets/logo/movie2.png'
 
 const headerNav = [
   {
@@ -40,25 +41,23 @@ const Header = () => {
 
   const active = headerNav.findIndex((e) => e.path === pathname);
   return (
-    <div ref={headerRef}>
-      <div className="headerwrap container">
+    <div ref={headerRef} className='header'>
+      <div className="header__wrap container">
         <div className="logo">
           <Link className="logostyle" to="/">
             <h1>
-              <span className="color-logo">B</span>etro{' '}
-              <span className="logosmall">
-                <span className="color-logo">M</span>ovies
-              </span>
+             <span className='color-logo'>B</span>etro
             </h1>
           </Link>
+          <img src={logo} alt="Logo" />
         </div>
-        <ul className="headernav">
+        <ul className="header__nav">
           {headerNav.map((list, i) => (
             <li
               key={i}
-              className={`${i === active ? 'active' : 'listdisplay'}`}
+              className={`${i === active ? 'active' : ''}`}
             >
-              <Link className="listdisplay" to={list.path}>
+              <Link className='liststyling'  to={list.path}>
                 {list.display}
               </Link>
             </li>

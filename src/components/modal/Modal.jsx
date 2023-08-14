@@ -25,11 +25,11 @@ export const ModalContent = props  => {
     if(props.onClose) props.onClose();
  }
  return(
-    <div ref={contentRef} className="modal content">
+    <div ref={contentRef} className="modal__content">
         {
             props.children
         }
-        <div className="modal content close" onClick={closeModal}>
+        <div className="modal__content close" onClick={closeModal}>
             <i className='bx'></i>
         </div>
 

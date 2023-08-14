@@ -8,11 +8,11 @@ import 'swiper/css'
 function App() {
   return (
     <BrowserRouter>
-      <>
+      <div className='app'>
         <Header />
         <Routing />
         <Footer />
-      </>
+      </div>
     </BrowserRouter>
   );
 }
