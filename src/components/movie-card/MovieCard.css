@@ -1,0 +1,44 @@
+.movie-card{
+        position: relative;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 160%;
+        border-radius: 30px;
+        margin-bottom: 1rem;
+}
+.movie-card .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s ease, box-shadow .3s ease;
+
+}
+.movie-card:hover .btn{
+    transform: translate(-50%, -50%) scale(1);
+}
+.movie-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    transition: opacity .3s ease;
+    border-radius: 30px;
+}
+.movie-card:hover::before{
+    opacity: .8;
+}
+h3{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color .3s ease;
+}
+.listing:hover h3{
+    color: rgb(255, 107, 137);
+}

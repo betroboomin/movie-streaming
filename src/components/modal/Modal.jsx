@@ -1,5 +1,6 @@
 import React, { useEffect, useState , useRef} from 'react'
 import PropTypes from 'prop-types'
+import { FaTimes } from 'react-icons/fa';
 import './Modal.css'
 const Modal = props => {
 
@@ -29,8 +30,8 @@ export const ModalContent = props  => {
         {
             props.children
         }
-        <div className="modal__content close" onClick={closeModal}>
-            <i className='bx'></i>
+        <div className="modal__content__close" onClick={closeModal}>
+        <FaTimes />
         </div>
 
     </div>
