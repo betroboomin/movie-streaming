@@ -16,7 +16,7 @@
     left: 0;
     bottom: 0;
     background-color: black;
-    opacity: .9;
+    opacity: .92;
     /* z-index: 99; */
 }
 .footer__content{
@@ -24,11 +24,24 @@
     max-width: 1000px;
 }
 .footer__content__logo{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
+    animation: widthAnimation 1s infinite;
 }
+@keyframes widthAnimation {
+    0% {
+        opacity: 100%;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100%;
+      }
+  }
 .footer__content__menus{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
