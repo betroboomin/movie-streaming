@@ -15,10 +15,11 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: black;
-    opacity: .92;
+    background-image: linear-gradient( #0f0f0f, rgba(0,0,0,.95));
     /* z-index: 99; */
 }
+
+
 .footer__content{
     position: relative;
     max-width: 1000px;
